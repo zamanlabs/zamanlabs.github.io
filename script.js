@@ -1,5 +1,7 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Thank you for contacting Zaman Labs! We will get back to you soon.');
-    this.reset();
+// Example of interactive behavior with JavaScript
+document.addEventListener('DOMContentLoaded', () => {
+  const heroSection = document.querySelector('.hero');
+  heroSection.addEventListener('click', () => {
+    alert('Welcome to ZAMAN Labs!');
+  });
 });
