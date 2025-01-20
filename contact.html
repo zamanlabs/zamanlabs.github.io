@@ -1,44 +1,43 @@
+<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaman Labs - Contact</title>
+    <title>Contact Us - Zaman Labs</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <a href="home.html">
-            <img src="logo.png" alt="Zaman Labs Logo">
-        </a>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="chat.html">Chat with ChatGPT</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <section id="contact">
+        <h2>Send us a message</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-    <main>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" name="name" placeholder="Your Name" required><br>
-                <input type="email" name="email" placeholder="Your Email" required><br>
-                <textarea name="message" placeholder="Your Message" required></textarea><br>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
     <footer>
-        &copy; 2024 Zaman Labs
+        <p>&copy; 2025 Zaman Labs. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
-
 </body>
 </html>
