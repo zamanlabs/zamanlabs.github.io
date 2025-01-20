@@ -21,8 +21,8 @@
     </header>
 
     <section id="chat">
-        <h2>Ask your questions</h2>
-        <div id="chatBox">
+        <h2 class="fade-in">Ask your questions</h2>
+        <div id="chatBox" class="slide-in">
             <textarea id="chatInput" rows="3" placeholder="Type your message..."></textarea>
             <button id="sendButton">Send</button>
             <div id="chatOutput"></div>
@@ -33,17 +33,8 @@
         <p>&copy; 2025 Zaman Labs. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.getElementById('sendButton').addEventListener('click', function() {
-            const input = document.getElementById('chatInput').value;
-            const output = document.getElementById('chatOutput');
-            if(input.trim()) {
-                const userMessage = `<p><strong>You:</strong> ${input}</p>`;
-                const responseMessage = `<p><strong>ChatGPT:</strong> This is a placeholder response. Imagine intelligent replies here!</p>`;
-                output.innerHTML += userMessage + responseMessage;
-                document.getElementById('chatInput').value = '';
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
