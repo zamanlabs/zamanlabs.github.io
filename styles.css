@@ -1,3 +1,4 @@
+/* Reset some default browser styles */
 * {
   margin: 0;
   padding: 0;
@@ -13,21 +14,28 @@ body {
   overflow-x: hidden;
 }
 
-/* Logo */
-.logo {
-  width: 100px;
-  margin: 20px;
-}
-
-/* Header */
+/* Header (Top bar) */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px; /* Reduced padding for a smaller top bar */
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.logo {
+  width: 80px; /* Adjusted for a zoomed-in look */
+  height: 80px;
+  border-radius: 50%; /* Circular projection for the logo */
+  object-fit: cover; /* Ensure the logo fits within the circle */
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2); /* Zoom effect when hovering over the logo */
+}
+
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
@@ -48,7 +56,7 @@ nav a:hover {
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 100px 0;
+  padding: 100px 20px;
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -95,10 +103,15 @@ nav a:hover {
   line-height: 1.5;
 }
 
+/* Footer (Bottom bar) */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 10px 20px; /* Reduced padding for a smaller bottom bar */
   background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
 }
 
 /* Animations */
