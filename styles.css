@@ -1,0 +1,62 @@
+/* Basic Styling */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); /* Apply background image */
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: #fff; 
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for nav */
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #333; 
+    text-decoration: none;
+}
+
+/* Home Page Styling */
+#home {
+    /* Add your CSS for home page styling and animations here */
+    color: #fff; /* Set text color for home page */
+}
+
+/* About Page Styling */
+#about {
+    padding: 2rem;
+    color: #fff; /* Set text color for about page */
+}
+
+/* Contact Page Styling */
+#contact {
+    padding: 2rem;
+    color: #fff; /* Set text color for contact page */
+}
+
+/* Media Query for Mobile Viewport */
+@media screen and (max-width: 768px) {
+    /* Add CSS for mobile layout here (e.g., adjust font sizes, margins, display) */
+}
