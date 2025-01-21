@@ -1,32 +1,28 @@
-/* script.js */
-window.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            target.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
 
-    // Chat interaction simulation
-    const sendButton = document.getElementById('sendButton');
+
+
+/* script.js */
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.getElementById('contactForm');
     const chatInput = document.getElementById('chatInput');
     const chatOutput = document.getElementById('chatOutput');
+    const sendButton = document.getElementById('sendButton');
 
-    sendButton.addEventListener('click', () => {
-        const userMessage = chatInput.value.trim();
-        if (userMessage) {
-            const userBubble = document.createElement('p');
-            userBubble.textContent = `You: ${userMessage}`;
-            chatOutput.appendChild(userBubble);
-            chatInput.value = '';
-            setTimeout(() => {
-                const botBubble = document.createElement('p');
-                botBubble.textContent = 'ChatGPT: This is a simulated response.';
-                chatOutput.appendChild(botBubble);
-                chatOutput.scrollTop = chatOutput.scrollHeight;
-            }, 1000);
-        }
-    });
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Your message has been sent!');
+            contactForm.reset();
+        });
+    }
+
+    if (chatInput && sendButton) {
+        sendButton.addEventListener('click', () => {
+            const message = chatInput.value.trim();
+            if (message) {
+                chatOutput.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+                chatInput.value = '';
+            }
+        });
+    }
 });
